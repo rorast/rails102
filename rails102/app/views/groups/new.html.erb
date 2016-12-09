@@ -2,6 +2,13 @@
   <h2>新增討論區</h2>
   <hr>
   <%= form_for @group do |f| %>
+
+  <ul>
+    <% @group.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+
   標題
   <%= f.text_field :title %>
   <br>
